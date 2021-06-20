@@ -6,6 +6,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
+import MockTestScreen from '../screens/MockTestScreen';
+import DailyTestSeries from '../screens/DailyTestSeries';
 import Question_1 from '../screens/Question_1';
 import CustomDrawer from '../screens/CustomDrawer';
 
@@ -57,6 +59,35 @@ const  AppNavigator = (props) => {
     return (
         <NavigationContainer>
             <Stack.Navigator > 
+
+            <Stack.Screen
+                    name="MockTestScreen"
+                    component={MockTestScreen}
+                    options={{
+                        headerShown:false,
+                    }}
+                />
+
+            <Stack.Screen
+                    name="DailyTestSeries"
+                    component={DailyTestSeries}
+                    options={{
+                        title:"Daily Test Series",
+                       
+                        // headerStyle: {
+                        // backgroundColor: '#f4511e', //Set Header color
+                        // },
+                        // headerTintColor: '#fff', //Set Header text color
+
+                        headerTitleStyle: {
+                        fontWeight: 'bold', 
+                        // alignSelf:'center',
+                        color:'#000',
+                        fontSize:18
+                        },
+                        
+                    }}
+                />
                 
                  <Stack.Screen
                     name="Question_1"
