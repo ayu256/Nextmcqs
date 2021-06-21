@@ -29,7 +29,7 @@ return (
 
         
         <View style={styles.start_button_view}>
-        <TouchableOpacity onPress={()=>navigation.navigate('Question_1')}>
+        <TouchableOpacity onPress={()=>navigation.navigate('MockTestScreen')}>
             <View style={{backgroundColor:'#5b0dad',marginVertical:5,width:70,height:30,
                     borderRadius:3,padding:5,shadowOpacity: 1,
                     shadowColor:'#000', 

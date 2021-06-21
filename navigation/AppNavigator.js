@@ -10,8 +10,16 @@ import MockTestScreen from '../screens/MockTestScreen';
 import DailyTestSeries from '../screens/DailyTestSeries';
 import Question_1 from '../screens/Question_1';
 import CustomDrawer from '../screens/CustomDrawer';
+import sideMenu from '../App/AppNavigation/sideMenu'
+import bottomNavigator from '../App/AppNavigation/bottomnavigator';
+import Login from '../App/Views/Auth/Login';
+import Signup from '../App/Views/Auth/Signup';
+import Category from '../App/Views/Category';
+import Splash from '../App/Views/Auth/Splash';
+import Profile from '../App/Views/Profile';
 
 const Drawer = createDrawerNavigator();
+const Drawer1 = createDrawerNavigator();
 const Stack = createStackNavigator();
 
 const DefaultDrawer = (props) => (
@@ -29,6 +37,23 @@ const DefaultDrawer = (props) => (
          component={Question_1}
         />
       </Drawer.Navigator>
+  );
+  const DefaultDrawer1 = (props) => (
+  
+    <Drawer1.Navigator
+        openByDefault={false}
+        drawerContentOptions={{
+        activeTintColor: '#fff',
+        itemStyle: {marginVertical: 5},
+      }}
+       drawerContent={(props) => <CustomDrawer {...props} />}>
+       
+       <Drawer1.Screen
+            name="bottomNavigator"
+            component={bottomNavigator}
+            options={{headerShown: false}}
+          />
+      </Drawer1.Navigator>
   );
 
 //   const NavigationDrawerStructure = (props)=> {
@@ -59,7 +84,37 @@ const  AppNavigator = (props) => {
     return (
         <NavigationContainer>
             <Stack.Navigator > 
-
+            <Stack.Screen
+            name="Splash"
+            component={Splash}
+            options={{headerShown: false}}
+          />
+          
+          <Stack.Screen
+            name="Dashboard"
+            component={Category}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Signup"
+            component={Signup}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="bottomNavigator"
+            component={DefaultDrawer1}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Profile"
+            component={Profile}
+            options={{headerShown: false}}
+          />
             <Stack.Screen
                     name="MockTestScreen"
                     component={MockTestScreen}
@@ -67,6 +122,7 @@ const  AppNavigator = (props) => {
                         headerShown:false,
                     }}
                 />
+                
 
             <Stack.Screen
                     name="DailyTestSeries"
