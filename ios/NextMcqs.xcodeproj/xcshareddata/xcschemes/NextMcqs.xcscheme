@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "NextMcqs.app"
-               BlueprintName = "NextMcqs"
-               ReferencedContainer = "container:NextMcqs.xcodeproj">
+               BuildableName = "Nextmcqs.app"
+               BlueprintName = "Nextmcqs"
+               ReferencedContainer = "container:Nextmcqs.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "NextMcqsTests.xctest"
-               BlueprintName = "NextMcqsTests"
-               ReferencedContainer = "container:NextMcqs.xcodeproj">
+               BuildableName = "NextmcqsTests.xctest"
+               BlueprintName = "NextmcqsTests"
+               ReferencedContainer = "container:Nextmcqs.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "NextMcqs.app"
-            BlueprintName = "NextMcqs"
-            ReferencedContainer = "container:NextMcqs.xcodeproj">
+            BuildableName = "Nextmcqs.app"
+            BlueprintName = "Nextmcqs"
+            ReferencedContainer = "container:Nextmcqs.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "NextMcqs.app"
-            BlueprintName = "NextMcqs"
-            ReferencedContainer = "container:NextMcqs.xcodeproj">
+            BuildableName = "Nextmcqs.app"
+            BlueprintName = "Nextmcqs"
+            ReferencedContainer = "container:Nextmcqs.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,6 +1,6 @@
 
 import React,{useState} from 'react';
-import {View, StyleSheet,ImageBackground,Image,Dimensions, TouchableOpacity,StatusBar,Alert} from 'react-native';
+import {View, StyleSheet,ImageBackground,Image,Dimensions,  Text,TouchableOpacity} from 'react-native';
 import { DrawerContentScrollView,} from '@react-navigation/drawer';
 
 import {
@@ -8,51 +8,13 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToFonts as wf,
   heightPercentageToFonts as hf,
-  widthPercentageToDP,
 } from "react-native-responsive-screen-font";
-import {
-     Container,
-     Header,
-     Title,
-     Content,
-     Footer,
-     FooterTab,
-     Text,
-     Icon,
-     ListItem,
-     Separator,Left, Right,Body, 
-   } from "native-base";
-   
-   
-   
-   import {menuStyles} from '../App/AppNavigation/style';
-   import {HeaderStyle} from '../App//AppNavigation/HeaderStyles';
-import Util from '../App/Common/util';
-import helper from '../App/Common/helper';
+
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 const CustomSidebarMenu = (props) => {
-  const   logout = () => {
-          Alert.alert(
-            'Confirmation',
-            'Are you sure you want to logout ?',
-            [
-                {
-                    text: 'Yes', onPress: () => {
-                        helper.clear_Async();
-                       props.navigation.navigate('Login')
-                    }
-                },
-                {
-                    text: 'Cancel',
-                    onPress: () => console.log('Cancel Pressed'),
-                    style: 'cancel',
-                },
-            ],
-            { cancelable: false },
-        );
-        };
+  
 return (
   
 <View style={{flex:1}}>
@@ -61,67 +23,240 @@ return (
 
     
          
-  <Header style={menuStyles.header}>
-              <View style={{backgroundColor:'white', width:70, height:70, borderRadius:50}}>
-                <Image source={""} style={{width:70, height:70, borderRadius:50}}/>
-              </View>
-              <Body style={HeaderStyle.Body}>
-              <Text style={[HeaderStyle.text,{fontSize: Util.normalize(11)}]}>{"NEXTMCQ"}</Text>
-                {/* <Text style={HeaderStyle.text}> MAKE  MY  HOUSE</Text>*/}
-                </Body> 
-              {/* <Right style={HeaderStyle.Right}> */}
-              {/* <Image source={menuButton} style={{ height: 30, width: 30, marginTop: -2, marginLeft: 0, alignSelf: 'flex-end' }} /> */}
-              {/* </Right> */}
-        </Header>
-        <Content>
-          {/* <Separator bordered>
-            <Text style={{ fontSize: width * 0.03, fontFamily: "Roboto" }}>
-             All Category
-            </Text>
-          </Separator> */}  
-          <ListItem >
-          <Icon name='home' type='AntDesign' style={{fontSize: 22}}/>
-            <Text style={menuStyles.headText}>
-             HOME
-            </Text>
-          </ListItem>
-          <ListItem >
-          <Icon name='user' type='AntDesign' style={{fontSize: 22}}/>
-         <Text style={menuStyles.headText}>
-          PROFILE
-         </Text>
-       </ListItem>
-          <ListItem >
-          <Icon name='edit' type='AntDesign' style={{fontSize: 22}}/>
-            <Text style={menuStyles.headText}>
-             TEST
-            </Text>
-          </ListItem>
-          <ListItem >
-          <Icon name='book' type='AntDesign' style={{fontSize: 22}}/>
-            <Text style={menuStyles.headText}>
-             PREPARE
-            </Text>
-          </ListItem>
-          {/* <ListItem onPress={() => this.designs()}>
-          <Image source={require('../../Assets/floorPlan.png')} style={{height:25, width:25}}/>
-            <Text style={menuStyles.headText}>
-             DESIGNS
-            </Text>
-          </ListItem>      */}
-          <ListItem last onPress={() => logout()}>
-          <Icon name='logout' type='AntDesign' style={{fontSize: 22}}/>
-            <Text style={menuStyles.headText}>
-              LOGOUT
-            </Text>
-          </ListItem>
-        
-        </Content>
-        <Footer style={{marginTop:widthPercentageToDP(90),backgroundColor:'white'}}>
+  <View style={{
+                    flexDirection:'row',padding:25
+                    }}>
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,right:5}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+                
+
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+              
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,left:10}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+
+            </View> 
+
+           
+            <View style={{
+                    flexDirection:'row',padding:25
+                    }}>
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,right:5}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+                
+
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+              
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,left:10}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+
+            </View> 
+
+            <View style={{
+                    flexDirection:'row',padding:25
+                    }}>
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,right:5}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+                
+
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+              
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,left:10}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+
+            </View> 
+
           
-          <FooterTab style={{ backgroundColor:'white' }} />
-          <Image source={require('../App/Assets/nextmcq.png')} resizeMode='contain' style={{width:'100%',height:'100%', alignSelf:'center', bottom:10, position:'absolute'}}/>
-        </Footer>
+            <View style={{
+                    flexDirection:'row',padding:25
+                    }}>
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,right:5}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+                
+
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+              
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,left:10}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+
+            </View> 
+
+           
+            <View style={{
+                    flexDirection:'row',padding:25
+                    }}>
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,right:5}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+                
+
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+              
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,left:10}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+
+            </View> 
+
+            <View style={{
+                    flexDirection:'row',padding:25
+                    }}>
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,right:5}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+                
+
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+              
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,left:10}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+
+            </View> 
+
+         
+            <View style={{
+                    flexDirection:'row',padding:25
+                    }}>
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,right:5}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+                
+
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+              
+               <View style={{backgroundColor:'#fff',marginVertical:5,width:70,
+                    borderRadius:5,padding:5,shadowOpacity: 1,
+                    shadowColor:'#000', 
+                    elevation: 4,left:10}}>
+               <TouchableOpacity>
+                    <Text style={{color:'#f4511e',fontFamily:'Poppins-Bold',fontSize:14,textAlign:'center'}}>Que1</Text>
+                </TouchableOpacity>
+               </View>
+
+            </View> 
     
       
 </DrawerContentScrollView>

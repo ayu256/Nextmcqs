@@ -32,7 +32,7 @@ return (
   </View>
 
     <View style={{flex:1,justifyContent:"flex-end",alignSelf:'center'}}>
-    <TouchableOpacity onPress= {() => navigation.navigate('Question_1')}>
+      <TouchableOpacity onPress= {() => navigation.navigate('DailyTestSeries')}>
         <View style={{backgroundColor:'green',marginVertical:5,width:170,height:40,
             borderRadius:3,padding:8,shadowOpacity: 1,shadowColor:'#000',elevation: 4}}>
                 <Text style={{color:'white',fontSize:18,textAlign:'center'}}>START TEST</Text>
