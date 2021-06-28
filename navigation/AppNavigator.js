@@ -22,44 +22,51 @@ import Question_1 from '../screens/Question_1';
 import Question_2 from '../screens/Question_2';
 import CustomDrawer from '../screens/CustomDrawer';
 
-const Drawer = createDrawerNavigator();
+const DrawerQ1 = createDrawerNavigator();
+const DrawerQ2 = createDrawerNavigator();
 const Stack = createStackNavigator();
 
-const DefaultDrawer = props => (
-  <Drawer.Navigator
+const DefaultDrawerQ1 = props => (
+  <DrawerQ1.Navigator
     openByDefault={false}
+    drawerPosition="right"
     drawerContentOptions={{
       activeTintColor: '#fff',
       itemStyle: {marginVertical: 5},
     }}
-    drawerContent={props => <CustomDrawer {...props} />}>
-    <Drawer.Screen name="Question_1" component={Question_1} />
-  </Drawer.Navigator>
+    drawerContent={(props, navigation) => (
+      <CustomDrawer {...props} {...navigation} />
+    )}>
+    <DrawerQ1.Screen
+      name="Question_1"
+      component={Question_1}
+      drawerContent={(props, navigation) => (
+        <CustomDrawer {...props} {...navigation} />
+      )}
+    />
+  </DrawerQ1.Navigator>
 );
 
-//   const NavigationDrawerStructure = (props)=> {
-//     //Structure for the navigatin Drawer
-//     const toggleDrawer = () => {
-//       //Props to open/close the drawer
-//       props.navigationProps.toggleDrawer();
-//     };
-
-//     return (
-//       <View style={{ flexDirection: 'row' }}>
-//         <TouchableOpacity onPress={()=> toggleDrawer()}>
-//           {/*Donute Button Image */}
-//           <Image
-//             source={{uri: 'https://raw.githubusercontent.com/AboutReact/sampleresource/master/drawerWhite.png'}}
-//             style={{
-//               width: 25,
-//               height: 25,
-//               marginLeft: 5
-//             }}
-//           />
-//         </TouchableOpacity>
-//       </View>
-//     );
-//   }
+const DefaultDrawerQ2 = props => (
+  <DrawerQ2.Navigator
+    openByDefault={false}
+    drawerPosition="right"
+    drawerContentOptions={{
+      activeTintColor: '#fff',
+      itemStyle: {marginVertical: 5},
+    }}
+    drawerContent={(props, navigation) => (
+      <CustomDrawer {...props} {...navigation} />
+    )}>
+    <DrawerQ2.Screen
+      name="Question_2"
+      component={Question_2}
+      drawerContent={(props, navigation) => (
+        <CustomDrawer {...props} {...navigation} />
+      )}
+    />
+  </DrawerQ2.Navigator>
+);
 
 const AppNavigator = props => {
   return (
@@ -78,12 +85,6 @@ const AppNavigator = props => {
           component={DailyTestSeries}
           options={{
             title: 'Daily Test Series',
-
-            // headerStyle: {
-            // backgroundColor: '#f4511e', //Set Header color
-            // },
-            // headerTintColor: '#fff', //Set Header text color
-
             headerTitleStyle: {
               fontWeight: 'bold',
               // alignSelf:'center',
@@ -95,17 +96,9 @@ const AppNavigator = props => {
 
         <Stack.Screen
           name="Question_1"
-          component={DefaultDrawer}
+          component={DefaultDrawerQ1}
           options={{
             title: 'Question 1',
-            // headerLeft: ()=>
-            // <NavigationDrawerStructure
-            //     navigationProps={navigation}
-            // />,
-            // headerStyle: {
-            // backgroundColor: '#f4511e', //Set Header color
-            // },
-            // headerTintColor: '#fff', //Set Header text color
             headerTitleStyle: {
               fontWeight: 'bold',
               alignSelf: 'center',
@@ -116,7 +109,7 @@ const AppNavigator = props => {
 
         <Stack.Screen
           name="Question_2"
-          component={Question_2}
+          component={DefaultDrawerQ2}
           options={{
             title: 'Question 2',
             headerTitleStyle: {
